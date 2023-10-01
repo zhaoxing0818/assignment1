@@ -1,0 +1,31 @@
+<%#
+   File Name: layout.ejs
+   Student's Name: Zhaoxing Chang
+   Student ID: 301297266
+   Date: September 30, 2023
+%>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link rel="stylesheet" type="text/css" href="/public/stylesheets/style.css">
+</head>
+<body>
+    <div id="container">
+        <!-- Include the header partial -->
+        <div id="header">
+            <%- include('partials/header.ejs') %>
+        </div>
+        <!-- Display the main content body -->
+        <div id="mainbody">
+            <%- body %>
+        </div>
+        <!-- Include the footer partial -->
+        <div id="footer">
+            <%- include('partials/footer.ejs') %>
+        </div>
+    </div>
+</body>
+</html>

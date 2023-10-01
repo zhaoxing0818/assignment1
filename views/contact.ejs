@@ -1,0 +1,51 @@
+<%#
+   File Name: contact.ejs
+   Student's Name: Zhaoxing Chang
+   Student ID: 301297266
+   Date: September 30, 2023
+%>
+<div id="contacttitle">
+    <h1>Contact Us</h1> 
+</div>
+    
+<div id="contactinfo">
+    <h2>Contact Information</h2>
+    <p>Feel free to reach out to us using the following contact details:</p>
+    <ul>
+        <li>Email:<br><br> zchang9@centennialcollege.ca</li>
+        <br>
+        <li>Address: <br><br>941 Progress Ave, Scarborough,ON, M1G 3T8</li>
+    </ul>
+</div>
+
+<div id="contactform">
+    <h2>Contact Form</h2>
+    <p>Please use the form below to send us a message:</p>
+    <form id="contactForm" action="mailto:zchang9@centennialcollege.ca" method="POST" enctype="text/plain">
+        <label for="first_name">First Name:</label>
+        <input type="text" id="first_name" name="first_name"><br><br>
+        
+        <label for="last_name">Last Name:</label>
+        <input type="text" id="last_name" name="last_name"><br><br>
+        
+        <label for="contact_number">Contact Number:</label>
+        <input type="tel" id="contact_number" name="contact_number"><br><br>
+        
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email"><br><br>
+        
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="4" cols="50"></textarea><br><br>
+        
+        <input type="reset" value="Clear">
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+            window.location.href = '/home'; 
+        });
+        // Redirect to the home page after submission
+    </script>
+</div>
